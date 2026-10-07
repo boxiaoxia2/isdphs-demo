@@ -1,0 +1,52 @@
+This is box:{
+  |set.name:"zhuoyun-card"|
+
+  part(1):(
+    <article part="root">
+      <h2 part="title"><slot name="title">中舟韵</slot></h2>
+      <div part="body"><slot name="body">风起中舟，韵落纸上。这一枚 Box 来自模块《中舟韵》。</slot></div>
+      <footer part="footer"><slot name="footer">· isdphs ·</slot></footer>
+    </article>
+  )
+
+  css:{
+    :host{ display:block; }
+    [part="root"]{
+      background: var(--isd-color-bg);
+      border: 1px solid var(--isd-color-border);
+      border-radius: var(--isd-radius-lg);
+      padding: var(--isd-space-lg);
+      box-shadow: var(--isd-shadow-card);
+      transition: box-shadow .2s ease, transform .2s ease;
+      text-align: left;
+    }
+    [part="root"]:hover{
+      box-shadow: 0 8px 24px rgba(0,0,0,.12);
+      transform: translateY(-2px);
+    }
+    [part="title"]{
+      color: var(--isd-color-brand);
+      font-size: var(--isd-font-size-title);
+      margin: 0 0 var(--isd-space-sm);
+    }
+    [part="body"]{
+      color: var(--isd-color-text);
+      font-size: var(--isd-font-size-body);
+      line-height: 1.7;
+    }
+    [part="footer"]{
+      color: var(--isd-color-text-muted);
+      font-size: 12px;
+      margin-top: var(--isd-space-md);
+    }
+  }
+
+  js:(props, emit) {
+    onClick: (e, el) => emit("open", { title: (el.querySelector('[part="title"]')||{}).textContent })
+  }
+
+  tokens:{
+    "color":  "--isd-color-brand",
+    "radius": "--isd-radius-lg"
+  }
+}

@@ -1,0 +1,7 @@
+# ISDPHS 项目忽略项
+node_modules/
+dist/
+Local/
+*.local
+.DS_Store
+npm-debug.log*

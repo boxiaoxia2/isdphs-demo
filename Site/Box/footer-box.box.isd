@@ -1,0 +1,18 @@
+This is box:{
+  |set.name:"footer-box"|
+
+  part(1):(
+    <footer part="root">ISDPHS © 2026 · 页面即装配 · 组件即盒子</footer>
+  )
+
+  css:{
+    :host{ display:block; }
+    [part="root"]{
+      color: var(--isd-color-text-muted);
+      font-size: 12px;
+      text-align: center;
+      padding: var(--isd-space-md);
+      border-top: 1px solid var(--isd-color-border);
+    }
+  }
+}

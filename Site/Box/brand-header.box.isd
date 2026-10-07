@@ -1,0 +1,48 @@
+This is box:{
+  |set.name:"brand-header"|
+
+  part(1):(
+    <header part="root">
+      <a part="brand">ISDPHS</a>
+      <nav part="nav">
+        <a part="link">首页</a>
+        <a part="link">组件</a>
+        <a part="link">定制</a>
+        <a part="link">主题</a>
+      </nav>
+    </header>
+  )
+
+  css:{
+    :host{ display:block; }
+    [part="root"]{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--isd-space-md);
+      padding: var(--isd-space-md) var(--isd-space-lg);
+      background: var(--isd-color-bg);
+      border-bottom: 1px solid var(--isd-color-border);
+    }
+    [part="brand"]{
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--isd-color-brand);
+      text-decoration: none;
+      letter-spacing: .02em;
+    }
+    [part="nav"]{ display: flex; gap: var(--isd-space-sm); }
+    [part="link"]{
+      color: var(--isd-color-text-muted);
+      text-decoration: none;
+      font-size: var(--isd-font-size-body);
+      padding: var(--isd-space-xs) var(--isd-space-sm);
+      border-radius: var(--isd-radius-sm);
+    }
+    [part="link"]:hover{ color: var(--isd-color-brand); background: var(--isd-color-bg-subtle); }
+  }
+
+  tokens:{
+    "color": "--isd-color-brand"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@zhouis/中舟韵",
+  "version": "0.1.0",
+  "description": "《中舟韵》ISDPHS 示例模块：一套雅致的卡片与文字组件，演示 Box 定制与设计令牌",
+  "isdphs": {
+    "boxes": ["./Box/zhuoyun.box.isd"]
+  }
+}
