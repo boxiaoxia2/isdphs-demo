@@ -1,0 +1,32 @@
+This is box:{
+  |set.name:"hello-button"|
+
+  part(1):(
+    <button part="root">hi</button>
+  )
+
+  css:{
+    :host{ display:inline-block; }
+    [part="root"]{
+      background: var(--isd-color-brand);
+      color: var(--isd-color-on-brand);
+      border: none;
+      border-radius: var(--isd-radius-md);
+      padding: var(--isd-space-sm) var(--isd-space-lg);
+      font-size: var(--isd-font-size-body);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .15s ease, transform .15s ease;
+    }
+    [part="root"]:hover{ background: var(--isd-color-brand-hover); transform: translateY(-1px); }
+  }
+
+  js:(props, emit) {
+    onClick: (e, el) => emit("hello", { from: "hello-button" })
+  }
+
+  tokens:{
+    "color":  "--isd-color-brand",
+    "radius": "--isd-radius-md"
+  }
+}

@@ -1,0 +1,38 @@
+This is box:{
+  |set.name:"hero-card"|
+
+  part(1):(
+    <section part="root">
+      <zhuoyun-card></zhuoyun-card>
+      <p part="hint">↑ 来自模块 @zhouis/中舟韵 · 组合进自定义组件 hero-card</p>
+      <p part="desc">五层定制：Slots 槽位 · Parts 部件 · Tokens 令牌 · Composition 组合 · Module 分发</p>
+    </section>
+  )
+
+  css:{
+    :host{ display:block; }
+    [part="root"]{
+      max-width: 640px;
+      margin: var(--isd-space-lg) auto;
+      text-align: center;
+    }
+    [part="hint"]{
+      color: var(--isd-color-text-muted);
+      font-size: 12px;
+      margin-top: var(--isd-space-md);
+    }
+    [part="desc"]{
+      color: var(--isd-color-accent, var(--isd-color-text-muted));
+      font-size: var(--isd-font-size-body);
+      margin-top: var(--isd-space-sm);
+    }
+  }
+
+  js:(props, emit) {
+    onClick: (e, el) => emit("hero", { from: "hero-card" })
+  }
+
+  tokens:{
+    "accent": "--isd-color-accent"
+  }
+}

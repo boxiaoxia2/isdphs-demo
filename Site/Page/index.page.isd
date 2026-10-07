@@ -1,0 +1,8 @@
+This is page:{
+  <INDEX:LOADFIRST>!
+  layout from:[main]
+  box from:[brand-header, hero-card, hello-button, theme-toggle, footer-box]
+  public from:[nav]
+  |set.load:one by one|
+  |set.theme:default|
+}

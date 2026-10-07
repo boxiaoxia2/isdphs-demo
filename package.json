@@ -1,0 +1,14 @@
+{
+  "name": "isdphs-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "isdphs 使用方仓库：通过 npm 安装 isdphs，用 Site/Layout · Site/Page · Site/Box 声明式装配站点，演示模块分发与组件定制",
+  "scripts": {
+    "build": "isdphs build",
+    "dev": "isdphs dev",
+    "parse": "isdphs parse"
+  },
+  "dependencies": {
+    "isdphs": "^0.1.0"
+  }
+}

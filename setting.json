@@ -1,0 +1,32 @@
+{
+  "name": "isdphs-demo",
+  "lang": "zh-CN",
+  "theme": {
+    "active": "default",
+    "tokens": {
+      "default": {
+        "color.brand": "#0b6bcb",
+        "color.bg": "#f7f9fc",
+        "color.bg.subtle": "#eef2f7",
+        "color.text": "#1a2332",
+        "color.text.muted": "#5b6b7f",
+        "color.border": "#dde5ee",
+        "color.on-brand": "#ffffff",
+        "color.accent": "#e8622c"
+      },
+      "dark": {
+        "color.brand": "#4da3ff",
+        "color.bg": "#10141a",
+        "color.bg.subtle": "#1b2230",
+        "color.text": "#eef3fa",
+        "color.text.muted": "#9fb0c4",
+        "color.border": "#28303f",
+        "color.on-brand": "#08121f",
+        "color.accent": "#ff8a5c"
+      }
+    }
+  },
+  "build": {
+    "outDir": "dist"
+  }
+}

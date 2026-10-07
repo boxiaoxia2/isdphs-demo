@@ -1,0 +1,36 @@
+This is box:{
+  |set.name:"theme-toggle"|
+
+  part(1):(
+    <button part="root">主题: default</button>
+  )
+
+  css:{
+    :host{ display:inline-block; }
+    [part="root"]{
+      background: var(--isd-color-bg-subtle);
+      color: var(--isd-color-text);
+      border: 1px solid var(--isd-color-border);
+      border-radius: var(--isd-radius-md);
+      padding: var(--isd-space-sm) var(--isd-space-md);
+      font-size: var(--isd-font-size-body);
+      cursor: pointer;
+      transition: all .15s ease;
+    }
+    [part="root"]:hover{ border-color: var(--isd-color-brand); color: var(--isd-color-brand); }
+  }
+
+  js:(props, emit) {
+    onClick: (e, el) => {
+      const next = (window.Isd.getTheme() === "dark") ? "default" : "dark";
+      window.Isd.setTheme(next);
+      const btn = el.querySelector('[part="root"]');
+      if (btn) btn.textContent = "主题: " + next;
+      emit("theme", { theme: next });
+    }
+  }
+
+  tokens:{
+    "color": "--isd-color-text"
+  }
+}
